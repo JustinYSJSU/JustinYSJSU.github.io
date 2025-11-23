@@ -137,6 +137,13 @@
             font-size: 5rem;
             color: white;
             margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .about-text p {
@@ -276,9 +283,9 @@
             width: 80px;
             height: 80px;
             border-radius: 10px;
-            object-fit: contain;
+            object-fit: cover;
             background: #f3f4f6;
-            padding: 0.5rem;
+            padding: 0;
         }
 
         .timeline-content h3 {
@@ -290,6 +297,15 @@
             color: #2563eb;
             font-weight: 600;
             margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .company a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .timeline-content .company a:hover {
+            text-decoration: underline;
         }
 
         .timeline-content .date {
@@ -428,8 +444,8 @@
     <section class="hero">
         <div class="container">
             <h1>Hi, I'm Justin Yamamoto</h1>
-            <p>Software & Robotics Quality Assurence (QA)</p>
-            <a href="#contact" class="btn">Get In Touch</a>
+            <p>Software & Robotics Quality Assurance (QA)</p>
+            <a href="#contact" class="btn">Contact</a>
         </div>
     </section>
 
@@ -439,10 +455,10 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="profile-photo.jpg" alt="Your Name">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQE4C7bJ73I4Qg/profile-displayphoto-shrink_400_400/B56ZTyox.1HQAg-/0/1739237564745?e=1765411200&v=beta&t=5mMTp-Y1tMcBgpeBiLv5aZPrmLmjlZhtshnjme1fAP4" alt="Justin Yamamoto">
                 </div>
                 <div class="about-text">
-                    <p>I'm currently a member of the Software and Robotics QA team for Tesla's Optimus (humanoid robotics) program.  </p>
+                    <p>I'm currently a member of the Software and Robotics QA team for Tesla's Optimus (humanoid robotics) program.</p>
                 </div>
             </div>
         </div>
@@ -454,27 +470,31 @@
             <h2>Career</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <img src="https://cdn.worldvectorlogo.com/logos/tesla-motors.svg"alt="Tech Company Inc. Logo" class="company-logo">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D0BAQHUcu98SZ2TVw/company-logo_200_200/company-logo_200_200/0/1630576446368/tesla_motors_logo?e=2147483647&v=beta&t=8wY3yx6Rp5BFtpVB2G4Z1HW-U78D745rF1L5kt6OHSY" alt="Tesla Logo" class="company-logo">
                     <div class="timeline-content">
                         <h3>QA - Tesla Optimus</h3>
-                        <div class="company">Tesla</div>
+                        <div class="company">
+                            <a href="https://www.tesla.com/" target="_blank">Tesla</a>
+                        </div>
                         <div class="date">2025 - Present</div>
-                        <p>Design and execute comprehensive testing protocols to validate the reliability, safety, and efficiency of robotic systems</p>
+                        <p>Design and execute comprehensive testing protocols to validate the reliability, safety, and efficiency of robotic systems. Collaborate with cross-functional teams to identify and resolve defects, ensuring that systems meet specified performance and functionality standards.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <img src="" alt="Startup Solutions Logo" class="company-logo">
+                    <img src="https://media.licdn.com/dms/image/v2/D560BAQG2FevUj8vkJQ/company-logo_200_200/B56ZXJaLGWGoAI-/0/1742840836767/dyna_robotics_logo?e=2147483647&v=beta&t=zJAmxW25NkP0XaPjNcVjNTrDel0kEwboT1ft_qXAXSA" alt="Dyna Robotics Logo" class="company-logo">
                     <div class="timeline-content">
-                        <h3>Data Collection Operator</h3>
-                        <div class="company">Dyna Robotics</div>
+                        <h3>Data Collection Technician</h3>
+                        <div class="company">
+                            <a href="https://www.dyna.co/" target="_blank">Dyna Robotics</a>
+                        </div>
                         <div class="date">2024 - 2025</div>
-                        <p>Train & analyze machine learning (ML) models for deployment</p>
+                        <p>Train & analyze machine learning (ML) models using Python & Linux. Optimize data collection and QA testing workflows through collaboration with robotics and AI engineers.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
@@ -486,7 +506,7 @@
                         <li>Blackbox Testing</li>
                         <li>Whitebox Testing</li>
                         <li>Regression Testing</li>
-                        <li> API Testing (Postman) </li>
+                        <li>API Testing (Postman)</li>
                     </ul>
                 </div>
                 <div class="skill-card">
@@ -497,7 +517,7 @@
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3> Programming & Scripting</h3>
+                    <h3>Programming & Scripting</h3>
                     <ul>
                         <li>Python</li>
                         <li>Java</li>
@@ -506,7 +526,7 @@
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>CI / CD & Version Control</h3>
+                    <h3>CI/CD & Version Control</h3>
                     <ul>
                         <li>Git</li>
                         <li>GitHub</li>
@@ -531,21 +551,21 @@
                         <h3>SpaceX API Validation Suite</h3>
                         <p>Automated test suite for the SpaceX public API. Covers data-driven testing for response codes and returned data schema via YAML and pytest.</p>
                         <div class="project-links">
-                            <a href="#">View Demo</a>
-                            <a href="https://github.com/JustinYSJSU/spacex_api_validation">GitHub</a>
+                            <a href="https://github.com/JustinYSJSU/spacex_api_validation" target="_blank">Demo</a>
+                            <a href="https://github.com/JustinYSJSU/spacex_api_validation" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://www.therobotreport.com/wp-content/uploads/2018/08/Screen-Shot-2018-08-14-at-3.48.34-PM-e1534276207970.png" alt="Project Two Screenshot">
+                        <img src="https://www.therobotreport.com/wp-content/uploads/2018/08/Screen-Shot-2018-08-14-at-3.48.34-PM-e1534276207970.png" alt="ROS 2 TurtleBot3">
                     </div>
                     <div class="project-content">
                         <h3>ROS 2 Automation Suite</h3>
                         <p>Automated test suite for robotics navigation (TurtleBot3) using pytest, ros2-humble, and gazebo</p>
                         <div class="project-links">
-                            <a href="#">View Demo</a>
-                            <a href="https://github.com/JustinYSJSU/robot_test_automation">GitHub</a>
+                            <a href="https://github.com/JustinYSJSU/spacex_api_validation" target="_blank">Demo</a>
+                            <a href="https://github.com/JustinYSJSU/robot_test_automation" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
